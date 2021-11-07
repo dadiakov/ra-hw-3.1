@@ -7,9 +7,8 @@ export default function Stars({ count }) {
     if (count < 1 || count > 5 || typeof count !== 'number') {
       return null;
     }
-    count = Math.round(count);
     const arrayOfStars = [];
-    for (let i = 0; i < count; i++) {
+    for (let i = 0; i < Math.round(count); i++) {
       arrayOfStars.push(
         <li key={uuidv4()}>
           <Star />
